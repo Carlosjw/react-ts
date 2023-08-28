@@ -1,17 +1,14 @@
-export default function App(){
-  return(
-    <div>
-      <h1>The first {<Student name="Solange Lima"/>} ReactTS project!</h1>
-    </div>
+import Student from "./components/student"
+import Footer from "./components/footer"
+import Header from "./components/header"
+
+export default function App() {
+  return (
+    <>
+      <Header title="Alunos do Curso React + TypeScript"/>
+      <Student name="Solange Lima" age={35} />
+      <Footer/>
+    </>
   )
 }
 
-interface StudentProps{
-  name: string;
-}
-
-function Student({name}: StudentProps){
-  return(
-    <span style={{color: "blue"}}>{name}</span>
-  )
-}
